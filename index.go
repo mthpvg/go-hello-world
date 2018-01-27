@@ -31,6 +31,7 @@ func nakedReturns(sum int) (x, y int) {
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -MAIN
 func main() {
 	var functionVar bool
+	var golang, java = true, "no!"
 
 	fmt.Println("Hello World, 世界")
 	fmt.Printf("Math, square root of 7 is: %g.\n", math.Sqrt(7))
@@ -41,7 +42,8 @@ func main() {
 	fmt.Println(a, b)
 	c, d := nakedReturns(17)
 	fmt.Printf("Naked return: %d %d\n", c, d)
-	fmt.Printf("Varaibale declaration: %t, %t\n", packageVar, functionVar)
+	fmt.Printf("Variable declaration: %t, %t\n", packageVar, functionVar)
+	fmt.Printf("Variable initializers: %t, %s\n", golang, java)
 }
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - END
