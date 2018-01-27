@@ -15,7 +15,13 @@ func addMixed(x float32, y int) int {
 }
 
 func swap(x, y string) (string, string) {
-	return y, x
+  return y, x
+}
+
+func nakedReturns(sum int) (x, y int) {
+  x = sum * 4 / 9
+  y = sum - x
+  return
 }
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -MAIN
 func main() {
@@ -26,5 +32,7 @@ func main() {
   fmt.Printf("Function, result: %d.\n", addMixed(1.4142, 2))
   a, b := swap("results", "Multiple")
   fmt.Println(a, b)
+  c, d := nakedReturns(17)
+  fmt.Printf("Naked return: %d %d\n", c, d)
 }
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - END
